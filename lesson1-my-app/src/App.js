@@ -5,7 +5,7 @@ import ContactsPage from "./pages/contactsPage/ContactsPage";
 function App() {
     return (
         <div className="App">
-            {/*<MainPage />*/}
+            <MainPage />
             <ContactsPage />
         </div>
     );

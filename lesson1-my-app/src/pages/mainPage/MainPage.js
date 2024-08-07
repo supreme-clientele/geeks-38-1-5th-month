@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 const MainPage = () => {
 
-    const mainTitle  = useSelector(state => state.title)
+    const mainTitle  = useSelector(state => state.mainReducer.title)
 
     const dispatch  = useDispatch()
 
@@ -16,7 +16,7 @@ const MainPage = () => {
     return (
         <div>
             <h1>{mainTitle}</h1>
-            <button onClick={changeTitle}>change title</button>
+            <button onClick={changeTitle}>dispatch()</button>
         </div>
     );
 };

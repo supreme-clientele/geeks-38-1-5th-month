@@ -5,7 +5,7 @@ const ContactsPage = () => {
 
     const [input, setInput] = useState('');
 
-    const title = useSelector(state => state.contactsTitle);
+    const title = useSelector(state => state.contactsReducer.contactsTitle);
     const dispatch = useDispatch();
 
     const withParams = () => {
