@@ -11,7 +11,7 @@ const ContactsPage = () => {
     const withParams = () => {
         dispatch({
             type: 'WITH_PARAMS',
-            payload: 'hello geeks'
+            payload: 123132123132
         })
     }
 
