@@ -1,15 +1,14 @@
+import { types } from "./types"
+
 const initialState = {
     title: 'GeekTech',
-    contactsTitle: 'sdfsdfdfsfdsf'
+    contactsTitle: 'sdfdsfdsfdsd'
 }
 
-export default function mainReducer(state = initialState, action)  {
-    if(action.type === 'CHANGE_TITLE') {
+
+export default function mainReducer(state = initialState, action) {
+    if (action.type === types.CHANGE_TITLE) {
         return {...state, title: 'GEEKS!'}
-    } else if (action.type === 'WITH_PARAMS') {
-        return {...state, contactsTitle: action.payload}
-    } else if (action.type === 'FROM_INPUT') {
-        return {...state, contactsTitle: action.payload}
     }
 
     return state
