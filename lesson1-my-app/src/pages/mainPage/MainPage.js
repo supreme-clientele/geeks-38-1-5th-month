@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import {changeTitleAction} from "../../redux/actions";
 
 const MainPage = () => {
 
@@ -7,16 +8,11 @@ const MainPage = () => {
 
     const dispatch  = useDispatch()
 
-    const changeTitle = () => {
-        dispatch({
-            type: 'CHANGE_TITLE',
-        })
-    }
 
     return (
         <div>
             <h1>{mainTitle}</h1>
-            <button onClick={changeTitle}>dispatch()</button>
+            <button onClick={() => dispatch(changeTitleAction())}>change title</button>
         </div>
     );
 };

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
+import {changeInput, changeTitleWithParams} from "../../redux/actions";
 
 const ContactsPage = () => {
 
@@ -8,27 +9,14 @@ const ContactsPage = () => {
     const title = useSelector(state => state.contactsReducer.contactsTitle);
     const dispatch = useDispatch();
 
-    const withParams = () => {
-        dispatch({
-            type: 'WITH_PARAMS',
-            payload: 123132123132
-        })
-    }
-
-    const addInput = () => {
-        dispatch({
-            type: 'FROM_INPUT',
-            payload: input,
-        })
-    }
 
     return (
         <div>
             <h1>{title}</h1>
-            <button onClick={withParams}>change title with params</button>
+            <button onClick={() => dispatch(changeTitleWithParams(12121212))}>change title with params</button>
             <p>----------------------------------</p>
             <input type="text" onChange={(event) => setInput(event.target.value)} />
-            <button onClick={addInput}>add</button>
+            <button onClick={() => dispatch(changeInput(input))}>add</button>
         </div>
     );
 };

@@ -4,7 +4,7 @@ const initialState = {
 
 export default function contactsReducer(state = initialState, action)  {
     if (action.type === 'WITH_PARAMS') {
-        return {...state, title: 'GEEKS!'}
+        return {...state, contactsTitle: action.payload}
     } else if (action.type === 'FROM_INPUT') {
         return {...state, contactsTitle: action.payload}
     }
