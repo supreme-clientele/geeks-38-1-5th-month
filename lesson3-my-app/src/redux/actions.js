@@ -43,3 +43,24 @@ export function fetchUsersAction() {
         dispatch(getUsersAction(data))
     }
 }
+
+export function addUsersAction(user) {
+    return async function () {
+
+        try {
+            const options = {
+                method: 'POST',
+                header: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            }
+
+            const response = await fetch('https://jsonplaceholder.typicode.com/users', options)
+
+            alert('success')
+        } catch (e) {
+            console.error(e)
+        }
+    }
+}
