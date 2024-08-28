@@ -22,7 +22,10 @@ const MainPage = () => {
     return (
         <div>
             <h1>{mainTitle}</h1>
-            <input type="text" onChange={(e) => setInput(e.target.value)} />
+            <div>
+                <input type="text" onChange={(e) => setInput(e.target.value)}/>
+                <span style={{fontSize: '24px'}}>&#10060;</span>
+            </div>
             <button onClick={changeTitle}>change title</button>
             <button onClick={changeTitleWithParams}>change title with params</button>
         </div>
